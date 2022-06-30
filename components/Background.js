@@ -24,6 +24,7 @@ export default function Background({ scrollActive }) {
                         {all.map((img, index) => (
                             <div className="relative h-1/2 w-full px-2" key={index} >
                                 <Image
+                                    sizes="50vw"
                                     src={img.src}
                                     layout="fill"
                                     objectFit='contain'
