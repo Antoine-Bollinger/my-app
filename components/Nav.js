@@ -32,6 +32,7 @@ export default function Nav({ className = '' }) {
                                     setActiveLink(ele.href);
                                 }}
                                 className="cursor-pointer transition"
+                                href={`#${ele.href}`}
                             >
                                 {ele.title}
                             </Linkscroll>
