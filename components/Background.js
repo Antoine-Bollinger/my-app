@@ -1,7 +1,7 @@
 import Image from "next/image";
 import bg from "../public/bg_binary.jpg";
 
-import mongoDb from "../public/backend/mongoDb.png";
+import mongodb from "../public/backend/mongodb.png";
 import mysql from "../public/backend/mysql.png";
 import node from "../public/backend/node.png";
 import nextjs from "../public/frontend/nextjs.svg";
@@ -10,7 +10,7 @@ import vue from "../public/frontend/vue.png";
 import php from "../public/language/php.jpg";
 import javascript from "../public/language/js.png";
 
-const back = [{ src: mongoDb, alt: 'Mongo DB' }, { src: mysql, alt: 'MySQL' }, { src: node, alt: "Node.js" }];
+const back = [{ src: mongodb, alt: 'Mongo DB' }, { src: mysql, alt: 'MySQL' }, { src: node, alt: "Node.js" }];
 const front = [{ src: nextjs, alt: 'Next.js' }, { src: react, alt: 'React' }, { src: vue, alt: "Vue.js" }];
 const language = [{ src: php, alt: 'PHP' }, { src: javascript, alt: 'Javascript' }];
 const all = [...back, ...front, ...language];

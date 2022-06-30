@@ -1,5 +1,4 @@
 import Section from '../components/Section';
-import Image from 'next/image';
 import EmblaCarousel from '../components/EmblaCarousel';
 
 import media1 from "../public/portfolio/1.webp";
