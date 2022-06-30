@@ -52,8 +52,6 @@ export default function Index({ data }) {
 
         const sectionObserver = new IntersectionObserver(test, { root: null, threshold: 0.5 });
         document.querySelectorAll('section')?.forEach(section => sectionObserver.observe(section));
-
-
     })
 
     return (

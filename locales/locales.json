@@ -33,6 +33,11 @@
                 "message": "Your message",
                 "send": "Send"
             }
+        },
+        "error": {
+            "title": "Error 404",
+            "error": "Page not found",
+            "link": "Go back to the home page"
         }
     },
     "fr": {
@@ -69,6 +74,11 @@
                 "message": "Votre message",
                 "send": "Envoyer"
             }
+        },
+        "error": {
+            "title": "Erreur 404",
+            "error": "Page introuvable",
+            "link": "Revenir à la page d'accueil"
         }
     },
     "pt": {
@@ -105,6 +115,11 @@
                 "message": "Sua mensagem",
                 "send": "Enviar"
             }
+        },
+        "error": {
+            "title": "Erro 404",
+            "error": "A página não foi encontrada",
+            "link": "Voltar para a página inicial"
         }
     }
 }
