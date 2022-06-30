@@ -22,7 +22,7 @@ export default function FourOhFour({ data }) {
 
     useEffect(() => {
         setSiteUrl(window.location.origin);
-    });
+    }, []);
 
     return (
         <>

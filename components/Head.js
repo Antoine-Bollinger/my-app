@@ -10,7 +10,7 @@ export default function MainHead({ title = '' }) {
 
     useEffect(() => {
         setSiteUrl(window.location.origin);
-    });
+    }, []);
 
     return (
         <Head>
