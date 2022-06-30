@@ -1,0 +1,110 @@
+{
+    "en": {
+        "lang": "English",
+        "abrev": "EN",
+        "nav": [
+            {
+                "title": "About",
+                "href": "about"
+            },
+            {
+                "title": "Projects",
+                "href": "projects"
+            },
+            {
+                "title": "Contact",
+                "href": "contact"
+            }
+        ],
+        "intro": "Fullstack Web Developer",
+        "resume": "CV_EN.pdf",
+        "about": {
+            "title": "About me"
+        },
+        "projects": {
+            "title": "My projects"
+        },
+        "contact": {
+            "title": "Contact",
+            "form": {
+                "name": "Your name",
+                "phone": "Your phone number",
+                "email": "Your email",
+                "message": "Your message",
+                "send": "Send"
+            }
+        }
+    },
+    "fr": {
+        "lang": "Français",
+        "abrev": "FR",
+        "nav": [
+            {
+                "title": "Qui je suis",
+                "href": "about"
+            },
+            {
+                "title": "Mes projets",
+                "href": "projects"
+            },
+            {
+                "title": "Contact",
+                "href": "contact"
+            }
+        ],
+        "intro": "Développeur Web Fullstack",
+        "resume": "CV_FR.pdf",
+        "about": {
+            "title": "Qui je suis"
+        },
+        "projects": {
+            "title": "Mes projets"
+        },
+        "contact": {
+            "title": "Contact",
+            "form": {
+                "name": "Votre nom",
+                "phone": "Votre téléphone",
+                "email": "Votre email",
+                "message": "Votre message",
+                "send": "Envoyer"
+            }
+        }
+    },
+    "pt": {
+        "lang": "Português",
+        "abrev": "PT",
+        "nav": [
+            {
+                "title": "Quem sou",
+                "href": "about"
+            },
+            {
+                "title": "Meus projetos",
+                "href": "projects"
+            },
+            {
+                "title": "Contato",
+                "href": "contact"
+            }
+        ],
+        "intro": "Desenvolvedor Web Fullstack",
+        "resume": "CV_EN.pdf",
+        "about": {
+            "title": "Sobre mim"
+        },
+        "projects": {
+            "title": "Meus projetos"
+        },
+        "contact": {
+            "title": "Contato",
+            "form": {
+                "name": "Seu nome",
+                "phone": "Seu telefone",
+                "email": "Seu email",
+                "message": "Sua mensagem",
+                "send": "Enviar"
+            }
+        }
+    }
+}
