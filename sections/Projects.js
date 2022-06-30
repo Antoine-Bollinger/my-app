@@ -38,7 +38,7 @@ const medias = [
 export default function Projects() {
     return (
         <Section id="projects">
-            <div className="w-full h-full">
+            <div className="w-full h-full shadow rounded overflow-hidden">
                 <EmblaCarousel slides={medias} />
             </div>
         </Section >

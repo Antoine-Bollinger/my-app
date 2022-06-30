@@ -29,34 +29,37 @@ export default function Form() {
     ];
 
     return (
-        <div className="w-full text-primary-900">
-            <div className="grid grid-cols-1 gap-6">
-                {inputs.map((input, index) => (
-                    <label className="flex" key={index}>
-                        <div className="flex items-center justify-center bg-light-grey rounded-l-md px-3">
-                            <FontAwesomeIcon icon={input.icon} />
-                        </div>
-                        <input
-                            type={input.type}
-                            className={`${inputsClass} rounded-r-md`}
-                            placeholder={input.placeholder}
-                        />
+        <>
+            <h2 className="text-2xl mb-8 text-center w-full">{locales[locale].contact.title}</h2>
+            <div className="w-full text-primary-900">
+                <div className="grid grid-cols-1 gap-6">
+                    {inputs.map((input, index) => (
+                        <label className="flex shadow" key={index}>
+                            <div className="flex items-center justify-center bg-light-grey rounded-l-md px-3">
+                                <FontAwesomeIcon icon={input.icon} />
+                            </div>
+                            <input
+                                type={input.type}
+                                className={`${inputsClass} rounded-r-md`}
+                                placeholder={input.placeholder}
+                            />
+                        </label>
+                    ))}
+                    <label className="block shadow">
+                        <textarea
+                            className={`${inputsClass} rounded-md`}
+                            rows="4"
+                            placeholder={locales[locale].contact.form.message}
+                        ></textarea>
                     </label>
-                ))}
-                <label className="block">
-                    <textarea
-                        className={`${inputsClass} rounded-md`}
-                        rows="4"
-                        placeholder={locales[locale].contact.form.message}
-                    ></textarea>
-                </label>
-                <button
-                    type="submit"
-                    className="mx-auto lg:mx-0 bg-white text-orange-900 hover:text-orange-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transition opacity-80 hover:opacity-100"
-                >
-                    <FontAwesomeIcon icon={faPaperPlane} /> {locales[locale].contact.form.send}
-                </button>
+                    <button
+                        type="submit"
+                        className="mx-auto lg:mx-0 bg-white text-orange-900 hover:text-orange-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transition opacity-80 hover:opacity-100"
+                    >
+                        <FontAwesomeIcon icon={faPaperPlane} /> {locales[locale].contact.form.send}
+                    </button>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
