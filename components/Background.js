@@ -1,7 +1,7 @@
 import Image from "next/image";
 import bg from "../public/bg_binary.jpg";
 
-import mongodb from "../public/backend/mongodb.png";
+import mongodb from "../public/backend/mongoDB.png";
 import mysql from "../public/backend/mysql.png";
 import node from "../public/backend/node.png";
 import nextjs from "../public/frontend/nextjs.svg";
