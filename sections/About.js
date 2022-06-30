@@ -21,6 +21,7 @@ export default function About() {
                 <div className="w-1/2 z-10 relative overflow-hidden animate-rotate">
                     <div className="w-[200%] absolute inset-0">
                         <Image
+                            priority
                             src={metwo}
                             layout="fill"
                             objectFit="contain"
@@ -28,6 +29,7 @@ export default function About() {
                             alt="Me two"
                         />
                         <Image
+                            priority
                             src={me}
                             layout="fill"
                             objectFit="contain"
@@ -40,6 +42,7 @@ export default function About() {
                 <div className="w-1/2 relative overflow-hidden animate-rotateReverse">
                     <div className="w-[200%] absolute top-0 bottom-0 right-0">
                         <Image
+                            priority
                             src={me}
                             layout="fill"
                             objectFit="contain"
@@ -47,6 +50,7 @@ export default function About() {
                             alt="Me"
                         />
                         <Image
+                            priority
                             src={metwo}
                             layout="fill"
                             objectFit="contain"
