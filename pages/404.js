@@ -18,8 +18,7 @@ export async function getStaticProps(context) {
 export default function FourOhFour({ data }) {
     const [siteUrl, setSiteUrl] = useState('');
     const { locale } = useRouter();
-    const [locales, setLocales] = useState(data[locale].error);
-    console.log(locales);
+    const [locales, setLocales] = useState(data[locale === 'default' ? 'en' : locale].error);
 
     useEffect(() => {
         setSiteUrl(window.location.origin);
