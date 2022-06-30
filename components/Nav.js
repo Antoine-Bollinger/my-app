@@ -13,7 +13,7 @@ export default function Nav({ className = '' }) {
     useEffect(() => {
         window.addEventListener("scroll", () => {
             setScrollActive(window.scrollY > 20);
-        });
+        }, { passive: true });
     }, []);
 
     return (
