@@ -63,13 +63,13 @@ export default function About() {
             <div className="w-full flex justify-end text-xl gap-4">
                 <div className="lg:w-1/3 text-end font-bold" dangerouslySetInnerHTML={{ __html: locales[locale].about.contentHtml }} />
                 <div className="flex flex-col justify-between text-3xl">
-                    <a href="https://github.com/antoinebollinger" alt="GitHub" className="text-orange-900 hover:text-orange-700 transition">
+                    <a href="https://github.com/antoinebollinger" title="GitHub" className="text-orange-900 hover:text-orange-700 transition">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
-                    <a href="https://www.linkedin.com/in/antoinebollinger/" alt="LinkedIn" className="text-orange-900 hover:text-orange-700 transition">
+                    <a href="https://www.linkedin.com/in/antoinebollinger/" title="LinkedIn" className="text-orange-900 hover:text-orange-700 transition">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
-                    <a href={`/documents/${locales[locale].resume}`} alt="Download" className="text-orange-900 hover:text-orange-700 transition">
+                    <a href={`/documents/${locales[locale].resume}`} title="Download" className="text-orange-900 hover:text-orange-700 transition">
                         <FontAwesomeIcon icon={faFileArrowDown} />
                     </a>
                 </div>
