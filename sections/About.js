@@ -40,6 +40,9 @@ export default function About() {
                         layout="responsive"
                         alt="Me"
                     />
+                    <div className="absolute left-pal top-full w-full h-pal text-white text-center leading-pal">
+                        {`<${locales[locale].intro} />`}
+                    </div>
                 </div>
             </div>
             <div className="w-full h-full flex items-end">

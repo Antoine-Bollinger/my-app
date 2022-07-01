@@ -1,3 +1,3 @@
-Meu nome é Antoine Bollinger, sou desenvolvedor web formado pela Openclassrooms. 
+Olá, sou Antoine, desenvolvedor web formado pela escola Openclassrooms.
 
-Eu coloco minhas habilidades ao seu serviço para seus projetos de sites.
+Escrevo código há quase 10 anos e adoro!

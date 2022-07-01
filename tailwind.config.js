@@ -58,6 +58,9 @@ module.exports = {
                 'pal': 'max(20px, 5vmin)',
                 '2pal': 'calc(2 * max(20px, 5vmin))',
                 '3pal': 'calc(3 * max(20px, 5vmin))'
+            },
+            lineHeight: {
+                'pal': 'max(20px, 5vmin)'
             }
         },
     },

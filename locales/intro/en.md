@@ -1,3 +1,3 @@
-My name is Antoine Bollinger, I am a web developer graduated from Openclassrooms. 
+Hi, I'm Antoine, web developer graduated from Openclassrooms school.
 
-I put my skills at your service for your website projects.
+I've been writing code for almost 10 years and I love it!

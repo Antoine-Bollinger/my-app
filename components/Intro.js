@@ -14,7 +14,7 @@ export default function Intro({ className = '' }) {
                     <h1 className="text-3xl uppercase font-bold h-2pal lg:h-auto">Antoine Bollinger</h1>
                 </a>
             </Link>
-            <p>{`<${locales[locale].intro} />`}</p>
+            {/* <p>{`<${locales[locale].intro} />`}</p> */}
         </header>
     )
 }
