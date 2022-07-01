@@ -25,8 +25,8 @@ export default function MainHead({ title = '' }) {
             <meta name="twitter:description" content={siteDescription} />
             <meta property="og:image" content="/preview.jpg" />
             <meta property="og:image:alt" content={siteDescription} />
-            <meta property="og:image:width" content="1434" />
-            <meta property="og:image:height" content="828" />
+            <meta property="og:image:width" content="1180" />
+            <meta property="og:image:height" content="820" />
             <meta property="og:site_name" content={siteTitle} />
             <meta property="og:type" content="object" />
             <meta property="og:title" content={siteTitle} />

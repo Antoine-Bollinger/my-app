@@ -3,9 +3,7 @@ import { LocalesContext } from "../lib/context";
 import { useRouter } from "next/router";
 
 import Section from "../components/Section";
-import Image from "next/image"
-import me from "../public/me.jpg";
-import metwo from "../public/metwo.jpg";
+import Identity from "../components/Identity";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -25,29 +23,17 @@ export function meImage(img) {
 }
 
 export default function About() {
-    const [locales, setLocales] = useContext(LocalesContext);
+    const [locales] = useContext(LocalesContext);
     const { locale } = useRouter();
 
     return (
         <Section id="about" className="flex flex-col lg:flex-row justify-end items-stretch">
             <div className="w-full flex items-start justify-start">
-                <div className="w-full lg:w-1/2 relative before:bg-orange-600 before:top-pal" id="identity">
-                    <Image
-                        priority
-                        src={metwo}
-                        height={metwo.height}
-                        width={metwo.width}
-                        layout="responsive"
-                        alt="Me"
-                    />
-                    <div className="absolute left-pal top-full w-full h-pal text-white text-center leading-pal">
-                        {`<${locales[locale].intro} />`}
-                    </div>
-                </div>
+                <Identity className="w-full lg:w-1/2 relative" id="metwo" />
             </div>
             <div className="w-full h-full flex items-end">
                 <div className="w-full flex justify-end items-stretch text-xl gap-4">
-                    <div className="lg:w-1/3 text-end font-bold" dangerouslySetInnerHTML={{ __html: locales[locale].about.contentHtml }} />
+                    <div className="lg:w-1/2 text-end font-bold" dangerouslySetInnerHTML={{ __html: locales[locale].about.contentHtml }} />
                     <div>
                         <div className="h-full flex flex-col justify-between text-3xl">
                             <a href="https://github.com/antoinebollinger" title="GitHub" className="text-orange-900 hover:text-orange-700 transition">
