@@ -31,7 +31,7 @@ export function TechsBg({ scrollActive }) {
                                 src={img.src}
                                 layout="fill"
                                 objectFit='contain'
-                                className="grayscale hover:grayscale-0 animate-pulse opacity-50 transition"
+                                className="cursor-pointer grayscale hover:grayscale-0 animate-pulse opacity-50 transition"
                                 alt={img.alt}
                             />
                         </div>

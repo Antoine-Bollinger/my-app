@@ -18,7 +18,7 @@
         ],
         "externLink": {
             "title": "Wait!",
-            "message": "This link will take you to %s. Are you sure that's what you want?"
+            "message": "This link will take you to %s.<br/>Are you sure that's what you want?"
         },
         "modal": {
             "yes": "Yep",
@@ -70,10 +70,10 @@
         ],
         "externLink": {
             "title": "Attends !",
-            "message": "Ce lien t'emmène vers %s. Es-tu sûr(e) de vouloir t'y rendre ?"
+            "message": "Ce lien t'emmène vers %s.<br/>Es-tu sûr(e) de vouloir t'y rendre ?"
         },
         "modal": {
-            "yes": "Ouaip!",
+            "yes": "Ouaip !",
             "no": "Annuler"
         },
         "intro": "Développeur Web Fullstack",
@@ -122,7 +122,7 @@
         ],
         "externLink": {
             "title": "Espera !",
-            "message": "Este link vai te levar para %s. Tem certeza de que é o que você quer?"
+            "message": "Este link vai te levar para %s.<br/>Tem certeza de que é o que você quer?"
         },
         "modal": {
             "yes": "Sim!",
