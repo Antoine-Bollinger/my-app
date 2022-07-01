@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hello / Salut / Oi <img height="25" src="https://camo.githubusercontent.com/e8e7b06ecf583bc040eb60e44eb5b8e0ecc5421320a92929ce21522dbc34c891/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6876524a434c467a6361737252346961377a2f67697068792e676966">
 
-## Getting Started
+I'm [Antoine](https://antoinebollinger.vercel.app), I 💙 codes and languages.
 
-First, run the development server:
+📫 Contact-me: 
+- [x] [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/antoinebollinger)
+- [x] [![Gmail](https://img.shields.io/badge/-Gmail-black?logo=gmail)](mailto:antoine.bollinger@gmail.com)
+- [x] ![Discord](https://img.shields.io/badge/-AntoineBo%239898-black?logo=discord)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+You can talk to me in 
+![FR_20](img/fr.jpg) , 
+![GB_20](img/en.jpg) or 
+![BR_20](img/br.jpg)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Stacks I'm familiar with:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+| Languages | Databases | Back-end |Front-end | Environment |
+| --- | --- | --- | --- | --- |
+| [![JavaScript](https://img.shields.io/badge/-JavaScript-black?logo=javascript)](https://developer.mozilla.org/fr/docs/Web/JavaScript) <br> [![Php](https://img.shields.io/badge/-Php-blue?logo=php)](https://www.php.net) <br> [![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) <br> [![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS) | [![MongoDB](https://img.shields.io/badge/-MongoDB-green?logo=mongodb)](https://www.mongodb.com) <br> [![MySQL](https://img.shields.io/badge/-MySQL-orange?logo=mysql)](https://www.mysql.com) | [![Nodejs](https://img.shields.io/badge/-Nodejs-black?logo=Node.js)](https://nodejs.org) | [![CSS3](https://img.shields.io/badge/-SASS-pink?logo=sass)](https://sass-lang.com) <br> [![Bootstrap](https://img.shields.io/badge/-Bootstrap-563D7C?logo=bootstrap)](https://getbootstrap.com) <br> [![JQuery](https://img.shields.io/badge/-JQuery-blue?logo=jquery)](https://jquery.com) <br> [![React](https://img.shields.io/badge/-React-blue?logo=react)](https://reactjs.org) <br> [![Vue.js](https://img.shields.io/badge/-Vue.js-green?logo=vue.js)](https://vuejs.org) | [![VisualStudioCode](https://img.shields.io/badge/-VisualStudioCode-blue?logo=visualstudio)](https://code.visualstudio.com) <br> [![npm](https://img.shields.io/npm/v/npm.svg?logo=npm)](https://www.npmjs.com) <br> [![GitHub](https://img.shields.io/badge/-GitHub-black?logo=github)](https://github.com) <br> [![Postman](https://img.shields.io/badge/-Postman-orange?logo=postman)](https://www.postman.com) |
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🏆 Stats
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+| Top languages | Github Stats |
+| --- | --- |
+| ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=antoinebollinger&show_icons=true&include_all_commits=true&layout=compact&hide_title=true&hide_border=true) | ![Antoine's GitHub stats](https://github-readme-stats.vercel.app/api?username=antoinebollinger&hide_title=true&hide_border=true&show_icons=true) |
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![](https://komarev.com/ghpvc/?username=antoinebollinger&color=yellow) [![Github](https://img.shields.io/github/followers/antoinebollinger?label=Followers&logo=Github)](https://github.com/antoinebollinger)
