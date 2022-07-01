@@ -21,14 +21,23 @@ html, body {
     }
     &:before {
         inset: 0;
-        border: theme('spacing.2pal') solid theme('colors.light-grey');
         opacity: 0.9;
+        border: theme('colors.light-grey') solid theme('spacing.pal');
+        @media (min-width: 1024px) {
+            border: theme('spacing.2pal') solid theme('colors.light-grey');
+        }
     }
     &:after {
         content: '';
         position: fixed;
-        inset: calc(theme('spacing.2pal') - 1px);
         border: 1px solid darkgray;
+        top: calc(theme('spacing.2pal') - 1px);
+        bottom: calc(theme('spacing.2pal') - 1px);
+        left: calc(theme('spacing.pal') - 1px);
+        right: calc(theme('spacing.pal') - 1px);
+        @media (min-width: 1024px) {
+            inset: calc(theme('spacing.2pal') - 1px);
+        }
     }
 }
 

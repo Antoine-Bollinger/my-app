@@ -16,47 +16,54 @@ export default function About() {
     const { locale } = useRouter();
 
     return (
-        <Section id="about" className="lg:items-center">
+        <Section id="about" className="lg:items-end">
             <div className="lg:flex-1 h-1/2 lg:h-auto w-full lg:w-1/2 2xl:w-1/3 overflow-hidden flex">
-                <div className="w-1/2 z-10 relative overflow-hidden animate-rotate">
-                    <div className="w-[200%] absolute inset-0">
-                        <Image
-                            priority
-                            src={metwo}
-                            layout="fill"
-                            objectFit="contain"
-                            className="opacity-100 hover:opacity-0 transition"
-                            alt="Me two"
-                        />
-                        <Image
-                            priority
-                            src={me}
-                            layout="fill"
-                            objectFit="contain"
-                            className="opacity-0 hover:opacity-100 transition"
-                            alt="Me"
-
-                        />
+                <div className="w-1/2 z-10 relative overflow-hidden">
+                    <div className="w-[200%] h-full relative inset-0 z-40">
+                        <div className="w-full absolute inset-0 opacity-100 hover:opacity-0 transition">
+                            <Image
+                                priority
+                                src={metwo}
+                                height={metwo.height}
+                                width={metwo.width}
+                                layout="responsive"
+                                alt="Me two"
+                            />
+                        </div>
+                        <div className="w-full absolute inset-0 opacity-0 hover:opacity-100 transition">
+                            <Image
+                                priority
+                                src={me}
+                                height={me.height}
+                                width={me.width}
+                                layout="responsive"
+                                alt="Me"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div className="w-1/2 relative overflow-hidden animate-rotateReverse">
+                <div className="w-1/2 relative overflow-hidden">
                     <div className="w-[200%] absolute top-0 bottom-0 right-0">
-                        <Image
-                            priority
-                            src={me}
-                            layout="fill"
-                            objectFit="contain"
-                            className="opacity-100 hover:opacity-0 transition"
-                            alt="Me"
-                        />
-                        <Image
-                            priority
-                            src={metwo}
-                            layout="fill"
-                            objectFit="contain"
-                            className="opacity-0 hover:opacity-100 transition"
-                            alt="Me two"
-                        />
+                        <div className="w-full absolute inset-0 opacity-100 hover:opacity-0 transition">
+                            <Image
+                                priority
+                                src={me}
+                                height={me.height}
+                                width={me.width}
+                                layout="responsive"
+                                alt="Me"
+                            />
+                        </div>
+                        <div className="w-full absolute inset-0 opacity-0 hover:opacity-100 transition">
+                            <Image
+                                priority
+                                src={metwo}
+                                height={metwo.height}
+                                width={metwo.width}
+                                layout="responsive"
+                                alt="Me again"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

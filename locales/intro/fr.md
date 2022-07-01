@@ -1,3 +1,3 @@
-Je m'appelle Antoine Bollinger, je suis développeur web diplômé d'Openclassrooms. 
+Salut, je suis Antoine, développeur web diplômé de l'école Openclassrooms. 
 
-Je mets mes compétences à votre service pour vos projets de site Web.
+J'écris du code depuis près de 10 ans et j'adore ça !

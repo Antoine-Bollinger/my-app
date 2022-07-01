@@ -33,19 +33,20 @@ const EmblaCarousel = ({ slides }) => {
     }, [embla, onSelect]);
 
     return (
-        <div className="h-full w-full flex flex-col">
-            <div className="embla flex-1 w-full">
+        <div className="w-full lg:w-4/5 flex flex-col">
+            <div className="embla pb-4">
                 <div className="embla__viewport" ref={mainViewportRef}>
                     <div className="embla__container">
                         {slides.map((img, index) => (
                             <div className="embla__slide" key={index}>
-                                <div className="embla__slide__inner relative">
+                                <div className="embla__slide__inner">
                                     <Image
                                         className="embla__slide__img"
                                         src={img.src}
                                         alt={img.title}
-                                        layout="fill"
-                                        objectFit="cover"
+                                        height={img.src.height}
+                                        width={img.src.width}
+                                        layout="responsive"
                                     />
                                 </div>
                             </div>
@@ -53,10 +54,9 @@ const EmblaCarousel = ({ slides }) => {
                     </div>
                 </div>
             </div>
-
-            <div className="embla embla--thumb w-full">
+            <div className="embla embla--thumb">
                 <div className="embla__viewport" ref={thumbViewportRef}>
-                    <div className="embla__container embla__container--thumb">
+                    <div className="embla__container embla__container--thumb skew-y-6">
                         {slides.map((img, index) => (
                             <Thumb
                                 onClick={() => onThumbClick(index)}
