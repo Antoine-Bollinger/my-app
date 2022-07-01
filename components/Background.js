@@ -9,7 +9,7 @@ export function TechsBg({ scrollActive }) {
             <div className={`h-2pal fixed w-full bottom-0 flex justify-between items-center flex-row  ${ele}`} key={index}>
                 {techs.map((img, index) => (
                     <div className={`relative h-1/2 w-full px-2`} key={index} >
-                        <a href={img.href} target="_blank" title={img.alt}>
+                        <a href={img.href} target="_blank" rel="noreferrer" title={img.alt}>
                             <Image
                                 sizes="10vw"
                                 src={img.src}
