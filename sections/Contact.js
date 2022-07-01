@@ -8,8 +8,8 @@ import Identity from "../components/Identity";
 
 export default function Contact() {
     return (
-        <Section id="contact" className="flex flex-col lg:flex-row justify-center items-center">
-            <div className="w-full h-full flex items-end justify-start hidden lg:flex">
+        <Section id="contact" className="flex flex-col lg:flex-row-reverse justify-center items-center">
+            <div className="w-full h-full flex items-end justify-end hidden lg:flex">
                 <Identity className="w-full lg:w-1/2 relative" />
             </div>
             <div className="w-full h-full flex flex-col justify-center">

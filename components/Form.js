@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { LocalesContext } from "../lib/context";
 import { useRouter } from "next/router";
 
@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPhone, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 export default function Form() {
-    const [locales, setLocales] = useContext(LocalesContext);
+    const [locales] = useContext(LocalesContext);
     const { locale } = useRouter();
 
     const inputsClass = "block w-full bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
@@ -35,7 +35,7 @@ export default function Form() {
                 <div className="grid grid-cols-1 gap-6">
                     {inputs.map((input, index) => (
                         <label className="flex shadow" key={index}>
-                            <div className="flex items-center justify-center bg-light-grey rounded-l-md px-3">
+                            <div className="flex items-center justify-center rounded-l-md px-3 text-orange-900">
                                 <FontAwesomeIcon icon={input.icon} />
                             </div>
                             <input
@@ -54,7 +54,7 @@ export default function Form() {
                     </label>
                     <button
                         type="submit"
-                        className="mx-auto lg:mx-0 bg-white text-orange-900 hover:text-orange-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transition opacity-80 hover:opacity-100"
+                        className="lg:ml-[50%] w-full lg:w-1/2 bg-white text-orange-900 hover:text-orange-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transition opacity-80 hover:opacity-100"
                     >
                         <FontAwesomeIcon icon={faPaperPlane} /> {locales[locale].contact.form.send}
                     </button>

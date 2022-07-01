@@ -16,8 +16,19 @@
                 "href": "contact"
             }
         ],
+        "externLink": {
+            "title": "Wait!",
+            "message": "This link will take you to %s. Are you sure that's what you want?"
+        },
+        "modal": {
+            "yes": "Yep",
+            "no": "Nope"
+        },
         "intro": "Fullstack Web Developer",
         "resume": "CV_EN.pdf",
+        "home": {
+            "title": ""
+        },
         "about": {
             "title": "About me"
         },
@@ -57,8 +68,19 @@
                 "href": "contact"
             }
         ],
+        "externLink": {
+            "title": "Attends !",
+            "message": "Ce lien t'emmène vers %s. Es-tu sûr(e) de vouloir t'y rendre ?"
+        },
+        "modal": {
+            "yes": "Ouaip!",
+            "no": "Annuler"
+        },
         "intro": "Développeur Web Fullstack",
         "resume": "CV_FR.pdf",
+        "home": {
+            "title": ""
+        },
         "about": {
             "title": "Qui je suis"
         },
@@ -98,8 +120,19 @@
                 "href": "contact"
             }
         ],
+        "externLink": {
+            "title": "Espera !",
+            "message": "Este link vai te levar para %s. Tem certeza de que é o que você quer?"
+        },
+        "modal": {
+            "yes": "Sim!",
+            "no": "Cancelar"
+        },
         "intro": "Desenvolvedor Web Fullstack",
         "resume": "CV_EN.pdf",
+        "home": {
+            "title": ""
+        },
         "about": {
             "title": "Sobre mim"
         },

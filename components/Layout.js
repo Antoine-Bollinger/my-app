@@ -4,6 +4,7 @@ import Intro from "./Intro";
 import Nav from "./Nav";
 import { Fragment, useEffect, useState } from "react";
 import Lang from "./Lang";
+import Modal from "./Modal";
 
 export default function Layout({ children, title }) {
     const [mainOpacity, setMainOpacity] = useState('opacity-0');
@@ -26,6 +27,7 @@ export default function Layout({ children, title }) {
             <main className="z-20">
                 {children}
             </main>
+            <Modal className="z-[999]" />
         </Fragment >
     )
 }

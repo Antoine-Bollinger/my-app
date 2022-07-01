@@ -1,15 +1,32 @@
+import { useContext } from "react";
+import { LocalesContext } from "../lib/context";
+import { useRouter } from "next/router";
+
 import Image from "next/image";
 import bg from "../public/bg_binary.jpg";
 
 import { techs } from "../data/techs";
+import { useCallback, useEffect, useState } from "react";
 
 export function TechsBg({ scrollActive }) {
-    return (<div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} z-40`}>
-        {['animate-infiniteXSlide', 'translate-x-full animate-infiniteXSlideDelay'].map((ele, index) => (
-            <div className={`h-2pal fixed w-full bottom-0 flex justify-between items-center flex-row  ${ele}`} key={index}>
-                {techs.map((img, index) => (
-                    <div className={`relative h-1/2 w-full px-2`} key={index} >
-                        <a href={img.href} target="_blank" rel="noreferrer" title={img.alt}>
+    const [locales] = useContext(LocalesContext);
+    const { locale } = useRouter();
+
+    const handleLink = useCallback((url) => {
+        console.log(locales[locale].externLink.message.replace('%s', `<strong>url</strong>`));
+        const modal = document.getElementById('modal');
+        modal.querySelector('.modal-title').insertAdjacentHTML('afterbegin', locales[locale].externLink.title);
+        modal.querySelector('.modal-body').insertAdjacentHTML('afterbegin', locales[locale].externLink.message.replace('%s', `<strong>${url}</strong>`));
+        modal.querySelector('.modal-link').href = url;
+        modal.classList.remove('hidden');
+    })
+
+    return (
+        <div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} z-40`}>
+            {['animate-infiniteXSlide', 'translate-x-full animate-infiniteXSlideDelay'].map((ele, index) => (
+                <div className={`h-2pal fixed w-full bottom-0 flex justify-between items-center flex-row  ${ele}`} key={index}>
+                    {techs.map((img, index) => (
+                        <div className={`relative h-1/2 w-full px-2`} onClick={() => { handleLink(img.href) }} key={index}>
                             <Image
                                 sizes="10vw"
                                 src={img.src}
@@ -18,12 +35,12 @@ export function TechsBg({ scrollActive }) {
                                 className="grayscale hover:grayscale-0 animate-pulse opacity-50 transition"
                                 alt={img.alt}
                             />
-                        </a>
-                    </div>
-                ))}
-            </div>
-        ))}
-    </div>)
+                        </div>
+                    ))}
+                </div>
+            ))}
+        </div>
+    )
 }
 
 export function MainBg({ scrollActive }) {
