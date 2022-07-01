@@ -37,7 +37,7 @@ const medias = [
 
 export default function Projects() {
     return (
-        <Section id="projects" className="justify-center">
+        <Section id="projects" className="flex justify-center items-center">
             <EmblaCarousel slides={medias} />
         </Section >
     )

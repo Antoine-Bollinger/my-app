@@ -17,11 +17,11 @@ export default function Nav({ className = '' }) {
     }, []);
 
     return (
-        <nav className={`${className}`}>
-            <ul className="flex lg:block justify-end">
+        <nav className={`${className}`} id="nav">
+            <ul className="flex justify-end">
                 {
                     locales[locale].nav.map((ele, index) => (
-                        <li className="text-orange-900 hover:text-orange-700 transition ml-4 lg:ml-0" key={index}>
+                        <li className="uppercase text-orange-900 hover:text-orange-700 transition ml-4" key={index}>
                             <Linkscroll
                                 activeClass="active text-orange-500"
                                 to={ele.href}

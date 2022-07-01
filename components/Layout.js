@@ -20,21 +20,11 @@ export default function Layout({ children, title }) {
         <Fragment>
             <MainHead title={title} />
             <Background scrollActive={scrollActive} />
-            <div className="bottom-2pal left-pal lg:left-2pal fixed -rotate-90 z-30" id="lang">
-                <Lang />
-            </div>
-            <div className="lg:top-3pal lg:left-3pal w-full lg:w-auto fixed z-30" id="intro">
-                <Intro className="mb-8 lg:text-left text-center" />
-                <Nav className={`${mainOpacity} transition rotate-90 lg:rotate-0 fixed lg:static bottom-2pal right-pal z-40`} />
-            </div>
-            <main className="lg:flex lg:flex-row flex-col gap-8 z-20">
-                <aside className="p-3pal pr-0 opacity-0 hidden lg:block">
-                    <Intro className="mb-8" />
-                    <Nav className={`${mainOpacity} mb-8`} />
-                </aside>
-                <article className={`${mainOpacity} transition h-full lg:flex-1`}>
-                    {children}
-                </article>
+            <Lang className="bottom-2pal left-pal lg:left-2pal fixed -rotate-90 z-30" />
+            <Nav className={`${mainOpacity} transition rotate-90 fixed bottom-2pal right-pal lg:right-2pal z-40`} />
+            <Intro className="lg:h-2pal lg:flex lg:flex-col lg:justify-center lg:left-2pal w-full fixed z-30 lg:text-left text-center" />
+            <main className="z-20">
+                {children}
             </main>
         </Fragment >
     )

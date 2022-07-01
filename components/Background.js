@@ -18,7 +18,7 @@ const all = [...back, ...front, ...language];
 export function TechsBg({ scrollActive }) {
     return (<div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} z-40`}>
         {['animate-infiniteXSlide', 'translate-x-full animate-infiniteXSlideDelay'].map((ele, index) => (
-            <div className={`h-2pal fixed w-full lg:top-0 bottom-0 flex justify-between items-center flex-row ${ele}`} key={index}>
+            <div className={`h-2pal fixed w-full bottom-0 flex justify-between items-center flex-row ${ele}`} key={index}>
                 {all.map((img, index) => (
                     <div className="relative h-1/2 w-full px-2" key={index} >
                         <Image
@@ -52,16 +52,22 @@ export function MainBg({ scrollActive }) {
     )
 }
 
+export function BlocksBg({ scrollActive }) {
+    return (
+        <div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} hidden`}>
+            <div className="fixed right-[10%] top-0 w-full lg:w-1/3 h-full shadow-xl z-0 animate-slide flex flex-col justify-around items-center"></div>
+            <div className="fixed left-[20%] bottom-10 w-full lg:w-1/4 h-1/2 shadow-up z-0 animate-slide flex flex-col justify-around items-center"></div>
+            <div className="fixed right-[20%] top-0 w-full lg:w-1/4 h-1/2 shadow-xl z-0 animate-slideReverse flex flex-col justify-around items-center"></div>
+        </div>
+    )
+}
+
 export default function Background({ scrollActive }) {
     return (
         <>
             <TechsBg scrollActive={scrollActive} />
             <MainBg scrollActive={scrollActive} />
-            <div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} hidden`}>
-                <div className="fixed right-[10%] top-0 w-full lg:w-1/3 h-full shadow-xl z-0 animate-slide flex flex-col justify-around items-center"></div>
-                <div className="fixed left-[20%] bottom-10 w-full lg:w-1/4 h-1/2 shadow-up z-0 animate-slide flex flex-col justify-around items-center"></div>
-                <div className="fixed right-[20%] top-0 w-full lg:w-1/4 h-1/2 shadow-xl z-0 animate-slideReverse flex flex-col justify-around items-center"></div>
-            </div>
+
 
 
         </>

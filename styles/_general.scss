@@ -45,8 +45,18 @@ html, body {
     transform-origin: left bottom;
 }
 
-nav {
+#nav {
     transform-origin: right bottom;
+}
+
+#identity {
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: theme('spacing.pal');
+    }
 }
 
 a {

@@ -8,7 +8,7 @@ export default function Intro({ className = '' }) {
     const { locale } = useRouter();
 
     return (
-        <header className={`${className}`}>
+        <header className={`${className}`} id="intro">
             <Link href="/">
                 <a className="text-orange-900 hover:text-orange-700 transition">
                     <h1 className="text-3xl uppercase font-bold h-2pal lg:h-auto">Antoine Bollinger</h1>
