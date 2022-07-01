@@ -33,7 +33,7 @@ const EmblaCarousel = ({ slides }) => {
     }, [embla, onSelect]);
 
     return (
-        <div className="w-full lg:w-4/5 flex flex-col">
+        <div className="w-full lg:w-3/5 flex flex-col">
             <div className="embla pb-4">
                 <div className="embla__viewport" ref={mainViewportRef}>
                     <div className="embla__container">

@@ -20,6 +20,7 @@ export default function Identity({ className, id = 'me' }) {
                 width={img.width}
                 layout="responsive"
                 alt="Antoine Bollinger"
+                placeholder="blur"
             />
             <div className="absolute left-pal top-full w-full h-pal text-white text-center leading-pal">
                 {`<${locales[locale].intro} />`}
