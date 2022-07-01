@@ -56,7 +56,7 @@ const EmblaCarousel = ({ slides }) => {
             </div>
             <div className="embla embla--thumb">
                 <div className="embla__viewport" ref={thumbViewportRef}>
-                    <div className="embla__container embla__container--thumb skew-y-6">
+                    <div className="embla__container embla__container--thumb">
                         {slides.map((img, index) => (
                             <Thumb
                                 onClick={() => onThumbClick(index)}

@@ -46,10 +46,10 @@ module.exports = {
                 rotateReverse: 'rotate 10s ease-in-out infinite reverse',
                 fadein: 'fadein 0.5s ease-in-out forwards',
                 fadeout: 'fadeout 0.5s ease-in-out forwards',
-                infiniteXSlide: 'infiniteXSlide 30s linear infinite',
-                infiniteXSlideDelay: 'infiniteXSlide 30s linear 15s infinite',
-                infiniteYSlide: 'infiniteYSlide 30s linear infinite',
-                infiniteYSlideDelay: 'infiniteYSlide 30s linear 15s infinite'
+                infiniteXSlide: 'infiniteXSlide 40s linear infinite',
+                infiniteXSlideDelay: 'infiniteXSlide 40s linear 20s infinite',
+                infiniteYSlide: 'infiniteYSlide 40s linear infinite',
+                infiniteYSlideDelay: 'infiniteYSlide 40s linear 20s infinite'
             },
             boxShadow: {
                 up: '0 -25px 50px -12px rgb(0 0 0 / 0.25)'
