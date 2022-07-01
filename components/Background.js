@@ -13,11 +13,10 @@ export function TechsBg({ scrollActive }) {
     const { locale } = useRouter();
 
     const handleLink = useCallback((url) => {
-        console.log(locales[locale].externLink.message.replace('%s', `<strong>url</strong>`));
         const modal = document.getElementById('modal');
         modal.querySelector('.modal-title').insertAdjacentHTML('afterbegin', locales[locale].externLink.title);
         modal.querySelector('.modal-body').insertAdjacentHTML('afterbegin', locales[locale].externLink.message.replace('%s', `<strong>${url}</strong>`));
-        modal.querySelector('.modal-link').href = url;
+        modal.querySelector('.modal-link').dataset.href = url;
         modal.classList.remove('hidden');
     })
 
