@@ -23,6 +23,8 @@ html, body {
         inset: 0;
         opacity: 0.9;
         border: theme('colors.light-grey') solid theme('spacing.pal');
+        border-top: theme('colors.light-grey') solid theme('spacing.2pal');
+        border-bottom: theme('colors.light-grey') solid theme('spacing.2pal');
         @media (min-width: 1024px) {
             border: theme('spacing.2pal') solid theme('colors.light-grey');
         }
