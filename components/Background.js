@@ -61,8 +61,8 @@ export function MainBg({ scrollActive }) {
 export function BubblesBg({ scrollActive }) {
     return (
         <div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} bubbles opacity-50 fixed inset-0 z-0`}>
-            {Array(20).fill(1).map(() => (
-                <span></span>
+            {Array(20).fill(1).map((ele, index) => (
+                <span key={index}></span>
             ))}
         </div>
     )
