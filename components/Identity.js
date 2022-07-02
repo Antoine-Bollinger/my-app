@@ -12,7 +12,7 @@ export function test() {
     console.log('test');
 }
 
-export default function Identity({ className, id = 'me' }) {
+export default function Identity({ className = '', id = 'me', text1 = '', text2 = '' }) {
     const [locales] = useContext(LocalesContext);
     const { locale } = useRouter();
 
@@ -30,26 +30,8 @@ export default function Identity({ className, id = 'me' }) {
                 alt="Antoine Bollinger"
                 placeholder="blur"
             />
-            <div className="absolute left-pal top-full w-full h-pal text-white text-center leading-pal">
-                {<Typewriter
-                    options={{
-                        strings: ['console.log("Hello world!");', '<?= "Hello world!"; ?>'],
-                        autoStart: true,
-                        loop: true,
-                        delay: '100'
-                    }}
-                />}
-            </div>
-            <div className="absolute left-0 top-pal w-full h-pal text-white text-center leading-pal origin-top-right -rotate-90">
-                {<Typewriter
-                    options={{
-                        strings: [locales[locale].intro],
-                        autoStart: true,
-                        loop: true,
-                        delay: '125'
-                    }}
-                />}
-            </div>
+            <div className="absolute left-pal top-full w-full h-pal text-white text-center leading-pal">{text1}</div>
+            <div className="absolute left-0 top-pal w-full h-pal text-white text-center leading-pal origin-top-right -rotate-90">{text2}</div>
         </div>
     )
 }
