@@ -58,12 +58,12 @@ export function MainBg({ scrollActive }) {
     )
 }
 
-export function BlocksBg({ scrollActive }) {
+export function BubblesBg({ scrollActive }) {
     return (
-        <div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} hidden`}>
-            <div className="fixed right-[10%] top-0 w-full lg:w-1/3 h-full shadow-xl z-0 animate-slide flex flex-col justify-around items-center"></div>
-            <div className="fixed left-[20%] bottom-10 w-full lg:w-1/4 h-1/2 shadow-up z-0 animate-slide flex flex-col justify-around items-center"></div>
-            <div className="fixed right-[20%] top-0 w-full lg:w-1/4 h-1/2 shadow-xl z-0 animate-slideReverse flex flex-col justify-around items-center"></div>
+        <div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} bubbles opacity-50 fixed inset-0 z-0`}>
+            {Array(20).fill(1).map(() => (
+                <span></span>
+            ))}
         </div>
     )
 }
@@ -71,6 +71,7 @@ export function BlocksBg({ scrollActive }) {
 export default function Background({ scrollActive }) {
     return (
         <>
+            <BubblesBg scrollActive={scrollActive} />
             <TechsBg scrollActive={scrollActive} />
             <MainBg scrollActive={scrollActive} />
         </>

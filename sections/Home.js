@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 
+import Typewriter from 'typewriter-effect';
+
 export function meImage(img) {
     return (
         <Image
@@ -29,7 +31,26 @@ export default function Home() {
     return (
         <Section id="home" className="flex flex-col lg:flex-row justify-end items-stretch">
             <div className="w-full flex items-start justify-start">
-                <Identity className="w-full lg:w-1/2 relative" id="metwo" />
+                <Identity
+                    className="w-full lg:w-1/2 relative"
+                    id="metwo"
+                    text1={<Typewriter
+                        options={{
+                            strings: ['console.log("Hello world!");', '<?= "Hello world!"; ?>'],
+                            autoStart: true,
+                            loop: true,
+                            delay: '100'
+                        }}
+                    />}
+                    text2={<Typewriter
+                        options={{
+                            strings: [locales[locale].intro],
+                            autoStart: true,
+                            loop: true,
+                            delay: '125'
+                        }}
+                    />}
+                />
             </div>
             <div className="w-full h-full flex items-end">
                 <div className="w-full flex justify-end items-stretch text-lg lg:text-xl gap-4">
