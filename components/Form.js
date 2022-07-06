@@ -35,7 +35,7 @@ export default function Form() {
                 <div className="grid grid-cols-1 gap-6">
                     {inputs.map((input, index) => (
                         <label className="flex shadow" key={index}>
-                            <div className="flex items-center justify-center rounded-l-md px-3 text-orange-900">
+                            <div className="flex items-center justify-center rounded-l-md px-3 text-orange-900 dark:bg-light-grey">
                                 <FontAwesomeIcon icon={input.icon} />
                             </div>
                             <input

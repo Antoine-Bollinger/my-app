@@ -4,10 +4,12 @@ module.exports = {
         "./components/**/*.{js,ts,jsx,tsx}",
         "./sections/**/*.{js,ts,jsx,tsx}",
     ],
+    darkMode: 'class',
     theme: {
         extend: {
             colors: {
-                'light-grey': '#e1dfdd'
+                'light-grey': '#e1dfdd',
+                'dark-grey': '#0D0D0D',
             },
             keyframes: {
                 slide: {
@@ -57,10 +59,16 @@ module.exports = {
             spacing: {
                 'pal': 'max(20px, 5vmin)',
                 '2pal': 'calc(2 * max(20px, 5vmin))',
-                '3pal': 'calc(3 * max(20px, 5vmin))'
+                '3pal': 'calc(3 * max(20px, 5vmin))',
+                'lap': 'calc(100% - max(20px, 5vmin))',
+                '2lap': 'calc(100% - calc(2 * max(20px, 5vmin)))',
+                '3lap': 'calc(100% - calc(3 * max(20px, 5vmin)))'
             },
             lineHeight: {
                 'pal': 'max(20px, 5vmin)'
+            },
+            dropShadow: {
+                'white': ['0 0 4px rgb(255 255 255 / 0.9)']
             }
         },
     },

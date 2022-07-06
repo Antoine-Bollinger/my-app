@@ -21,7 +21,7 @@ export default function Nav({ className = '' }) {
             <ul className="flex justify-end">
                 {
                     locales[locale].nav.map((ele, index) => (
-                        <li className="uppercase text-orange-900 hover:text-orange-700 transition ml-4" key={index}>
+                        <li className="uppercase text-orange-900 hover:text-orange-700 dark:text-orange-300 dark:hover:text-orange-500 transition ml-4" key={index}>
                             <Linkscroll
                                 activeClass="active text-orange-500"
                                 to={ele.href}
