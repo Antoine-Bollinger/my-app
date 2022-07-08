@@ -29,8 +29,7 @@ export default function Form() {
     ];
 
     return (
-        <>
-            <h2 className="text-2xl mb-8 text-center w-full">{locales[locale].contact.title}</h2>
+        <form>
             <div className="w-full text-primary-900">
                 <div className="grid grid-cols-1 gap-6">
                     {inputs.map((input, index) => (
@@ -60,6 +59,6 @@ export default function Form() {
                     </button>
                 </div>
             </div>
-        </>
+        </form>
     )
 }

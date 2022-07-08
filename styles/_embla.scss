@@ -1,5 +1,5 @@
 .embla {
-    background-color: theme('colors.light-grey');
+    // background-color: theme('colors.light-grey');
 }
 
 .embla__viewport {
@@ -36,6 +36,16 @@
     overflow: hidden;
 }
 
+.embla__slide__description {
+    &:hover {
+        + div {
+        .embla__slide__img {
+            transform: scale(1.1);
+        }
+    }
+    }
+}
+
 .embla__slide__img {
     width: auto;
     height: auto;
@@ -43,7 +53,6 @@
 
 .embla--thumb {
     padding-top: 0;
-// margin-top: -12px;
 }
 
 .embla__container--thumb {
@@ -63,7 +72,6 @@
     outline: 0;
     margin: 0;
     padding: 0;
-    // height: 100px;
     width: 100%;
     background-color: transparent;
     position: relative;
@@ -72,10 +80,12 @@
 }
 
 .embla__slide__thumbnail {
-    opacity: 0.2;
+    opacity: 0.5;
+    filter: contrast(.75);
     transition: opacity 0.2s;
 }
 
 .embla__slide--thumb.is-selected .embla__slide__thumbnail {
     opacity: 1;
+    filter: contrast(1);
 }

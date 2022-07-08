@@ -25,12 +25,14 @@ module.exports = {
                     'to': { transform: 'perspective(200rem) rotateY(360deg)' },
                 },
                 fadein: {
-                    'from': { opacity: '0' },
-                    'to': { opacity: '1' }
+                    '0%': { opacity: '0', display: 'none' },
+                    '1%': { opacity: '0', display: 'block' },
+                    '100%': { opacity: '1', display: 'block' }
                 },
                 fadeout: {
-                    'from': { opacity: '1' },
-                    'to': { opacity: '0' }
+                    '0%': { opacity: '1', display: 'block' },
+                    '99%': { opacity: '0', display: 'block' },
+                    '100%': { opacity: '0', display: 'none' }
                 },
                 infiniteXSlide: {
                     'from': { transform: 'translateX(100%)' },
@@ -60,9 +62,11 @@ module.exports = {
                 'pal': 'max(20px, 5vmin)',
                 '2pal': 'calc(2 * max(20px, 5vmin))',
                 '3pal': 'calc(3 * max(20px, 5vmin))',
+                '4pal': 'calc(4 * max(20px, 5vmin))',
                 'lap': 'calc(100% - max(20px, 5vmin))',
                 '2lap': 'calc(100% - calc(2 * max(20px, 5vmin)))',
-                '3lap': 'calc(100% - calc(3 * max(20px, 5vmin)))'
+                '3lap': 'calc(100% - calc(3 * max(20px, 5vmin)))',
+                '4lap': 'calc(100% - calc(4 * max(20px, 5vmin)))'
             },
             lineHeight: {
                 'pal': 'max(20px, 5vmin)'

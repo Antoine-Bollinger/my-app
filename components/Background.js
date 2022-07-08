@@ -79,9 +79,6 @@ export function BubblesBg({ scrollActive }) {
 }
 
 export function VideoBg({ scrollActive }) {
-    useEffect(() => {
-        // document.querySelector('video').play();
-    })
     return (
         <div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} fixed inset-0 `}>
             <video autoPlay loop muted className="w-full h-full object-cover grayscale blur dark:blur-sm opacity-60 dark:opacity-30">

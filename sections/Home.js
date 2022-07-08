@@ -54,16 +54,16 @@ export default function Home() {
             </div>
             <div className="w-full h-full flex items-end">
                 <div className="w-full flex justify-end items-stretch text-lg lg:text-xl gap-4">
-                    <div className="lg:w-1/2 text-end font-bold" dangerouslySetInnerHTML={{ __html: locales[locale].about.contentHtml }} />
+                    <div className="lg:w-1/2 text-end font-bold" dangerouslySetInnerHTML={{ __html: locales[locale].home.contentHtml }} />
                     <div>
                         <div className="h-full flex flex-col justify-between text-3xl">
-                            <a href="https://github.com/antoinebollinger" title="GitHub" className="text-orange-900 hover:text-orange-700  dark:text-orange-300 dark:hover:text-orange-500 transition">
+                            <a href="https://github.com/antoinebollinger" title={locales[locale].home.github} className="text-orange-900 hover:text-orange-700  dark:text-orange-300 dark:hover:text-orange-500 transition">
                                 <FontAwesomeIcon icon={faGithub} />
                             </a>
-                            <a href="https://www.linkedin.com/in/antoinebollinger/" title="LinkedIn" className="text-orange-900 hover:text-orange-700  dark:text-orange-300 dark:hover:text-orange-500 transition">
+                            <a href="https://www.linkedin.com/in/antoinebollinger/" title={locales[locale].home.linkedin} className="text-orange-900 hover:text-orange-700  dark:text-orange-300 dark:hover:text-orange-500 transition">
                                 <FontAwesomeIcon icon={faLinkedin} />
                             </a>
-                            <a href={`/documents/${locales[locale].resume}`} title="Download" className="text-orange-900 hover:text-orange-700  dark:text-orange-300 dark:hover:text-orange-500 transition">
+                            <a href={`/documents/${locales[locale].resume}`} title={locales[locale].home.resume} className="text-orange-900 hover:text-orange-700  dark:text-orange-300 dark:hover:text-orange-500 transition">
                                 <FontAwesomeIcon icon={faFileArrowDown} />
                             </a>
                         </div>

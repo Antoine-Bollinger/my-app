@@ -1,0 +1,6 @@
+<!-- **Tradução**. **Criação**. **Comunicação**. Eis os termos que melhor definem o meu trabalho. Seja **tradução de textos**, **elaboração de catálogos**, **redação do código** de um website, tudo isso implica a **tradução** – de uma necessidade, um pedido ou até um desejo – e a **criação de um resultado**. Et tudo isso participa da **comunicação entre as pessoas**. É isso que é a minha atividade e é isso que me anima. -->
+Comecei a escrever código em 2010 quando criei o meu site enquanto tradutor. Era um site simples escrito em `HTML` & `CSS`, baseado nos cursos do _Site du Zéro_ (agora _Openclassrooms_). Descobri então uma paixão pela codificação.
+
+Então me interessei pelo `VBA`, a linguagem de programação usada nos aplicativos do Microsoft Office. Criei um CRM usando Excel e VBA, depois recorri à linguagem `PHP` e ao sistema de gerenciamento de banco de dados `MySQL` para transpor esse CRM para um site.
+
+No final de 2020, decidi fazer um curso de diploma na _Openclassrooms_. Integrei e finalizei o curso Web Developer, que me deu uma visão geral do `Javascript`, seus diferentes frameworks e suas infinitas possibilidades. Desde então, venho me aperfeiçoando em projetos usando Vue.js, React ou Next.js.

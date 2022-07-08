@@ -3,9 +3,9 @@ import EmblaCarousel from '../components/EmblaCarousel';
 
 import { portfolio } from '../data/portfolio';
 
-export default function Projects() {
+export default function Portfolio() {
     return (
-        <Section id="projects" className="flex justify-center items-center">
+        <Section id="portfolio" className="flex justify-center">
             <EmblaCarousel slides={portfolio} />
         </Section >
     )

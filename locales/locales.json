@@ -4,12 +4,12 @@
         "abrev": "EN",
         "nav": [
             {
-                "title": "About",
-                "href": "about"
+                "title": "Portfolio",
+                "href": "portfolio"
             },
             {
-                "title": "Projects",
-                "href": "projects"
+                "title": "About",
+                "href": "about"
             },
             {
                 "title": "Contact",
@@ -27,13 +27,16 @@
         "intro": "Fullstack Web Developer",
         "resume": "CV_EN.pdf",
         "home": {
-            "title": ""
+            "title": "Home",
+            "github": "My Github",
+            "linkedin": "My profile on LinkedIn",
+            "resume": "Download my resume"
         },
         "about": {
             "title": "About me"
         },
-        "projects": {
-            "title": "My projects"
+        "portfolio": {
+            "title": "Portfolio"
         },
         "contact": {
             "title": "Contact",
@@ -56,12 +59,12 @@
         "abrev": "FR",
         "nav": [
             {
-                "title": "Qui je suis",
-                "href": "about"
+                "title": "Portfolio",
+                "href": "portfolio"
             },
             {
-                "title": "Mes projets",
-                "href": "projects"
+                "title": "à propos",
+                "href": "about"
             },
             {
                 "title": "Contact",
@@ -79,13 +82,16 @@
         "intro": "Développeur Web Fullstack",
         "resume": "CV_FR.pdf",
         "home": {
-            "title": ""
+            "title": "Accueil",
+            "github": "Mon Github",
+            "linkedin": "Mon profil sur LinkedIn",
+            "resume": "Télécharger mon CV"
         },
         "about": {
-            "title": "Qui je suis"
+            "title": "à propos de moi"
         },
-        "projects": {
-            "title": "Mes projets"
+        "portfolio": {
+            "title": "Mon portfolio"
         },
         "contact": {
             "title": "Contact",
@@ -108,12 +114,12 @@
         "abrev": "PT",
         "nav": [
             {
-                "title": "Quem sou",
-                "href": "about"
+                "title": "Meu portfolio",
+                "href": "portfolio"
             },
             {
-                "title": "Meus projetos",
-                "href": "projects"
+                "title": "Quem sou",
+                "href": "about"
             },
             {
                 "title": "Contato",
@@ -131,13 +137,16 @@
         "intro": "Desenvolvedor Web Fullstack",
         "resume": "CV_EN.pdf",
         "home": {
-            "title": ""
+            "title": "Home",
+            "github": "Meu Github",
+            "linkedin": "Meu perfil no LinkedIn",
+            "resume": "Baixar o meu currículo"
         },
         "about": {
             "title": "Sobre mim"
         },
-        "projects": {
-            "title": "Meus projetos"
+        "portfolio": {
+            "title": "Meu portfolio"
         },
         "contact": {
             "title": "Contato",

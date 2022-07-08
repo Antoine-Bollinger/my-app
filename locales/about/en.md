@@ -1,0 +1,6 @@
+<!-- **Translator**. **Creator**. **Communicating**. These are the words that best define my work. **Translating texts**, **elaborating catalogs**, **writing codes** for website, all this implies **translation** – of a need, a request or even a desire – and the **creation of a result**. And all this contributes to **communication between people**. That is where is my activity and what drives me. -->
+I started coding in 2010 when I created the showcase site for my translator activity. It was a simple site written in `HTML` & `CSS`, based on the courses of the _Site du Zéro_ (now _Openclassrooms_). I then discovered a passion for coding.
+
+I then became interested in `VBA`, the programming language used in Microsoft Office applications. I created a CRM using Excel and VBA, then I turned to the `PHP` language and the `MySQL` database management system in order to transpose this CRM to a website.
+
+At the end of 2020, I decided to follow a diploma course at _Openclassrooms_. I integrated and finalized the Web Developer course, which gave me an overview of `Javascript`, its different frameworks and its infinite possibilities. Since then, I have been perfecting myself on projects using Vue.js, React or Next.js.

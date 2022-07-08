@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { LocalesContext } from "../lib/context";
 
 export default function Lang({ className }) {
-    const [locales, setLocales] = useContext(LocalesContext);
+    const [locales] = useContext(LocalesContext);
     const { locale, pathname } = useRouter();
 
     return (
