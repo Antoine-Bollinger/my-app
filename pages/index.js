@@ -41,7 +41,6 @@ export default function Index({ data }) {
     const [scrollActive, setScrollActive] = useState(false);
     const [locales, setLocales] = useState(data);
     const { locale } = useRouter();
-    let activeSession = 0;
 
     useEffect(() => {
         window.addEventListener("scroll", () => {

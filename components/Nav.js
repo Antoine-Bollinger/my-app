@@ -1,20 +1,12 @@
 import { useRouter } from "next/router";
 import { useContext, useState, useEffect } from "react";
 import { LocalesContext } from "../lib/context";
-import Link from "next/link";
 import { Link as Linkscroll } from "react-scroll";
 
 export default function Nav({ className = '' }) {
     const [activeLink, setActiveLink] = useState(null);
-    const [scrollActive, setScrollActive] = useState(false);
     const [locales, setLocales] = useContext(LocalesContext);
-    const { locale, pathname } = useRouter();
-
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            setScrollActive(window.scrollY > 20);
-        }, { passive: true });
-    }, []);
+    const { locale } = useRouter();
 
     return (
         <nav className={`${className}`} id="nav">
