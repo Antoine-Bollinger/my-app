@@ -7,15 +7,11 @@ import Lang from "./Lang";
 import Modal from "./Modal";
 import Dark from "./Dark";
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, title, scrollActive }) {
     const [mainOpacity, setMainOpacity] = useState('opacity-0');
-    const [scrollActive, setScrollActive] = useState(false);
 
     useEffect(() => {
         setMainOpacity('opacity-100');
-        window.addEventListener("scroll", () => {
-            setScrollActive(window.scrollY > window.innerHeight / 3);
-        });
     }, [])
 
     return (
@@ -32,7 +28,7 @@ export default function Layout({ children, title }) {
 
             <Dark className={`${mainOpacity} fixed z-40 transition bottom-2lap left-lap lg:left-2lap origin-bottom-left rotate-90`} />
 
-            <main className="z-20">{children}</main>
+            <main className={`${mainOpacity} z-20`}>{children}</main>
 
             <Modal className="z-[999]" />
         </Fragment >

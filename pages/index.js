@@ -38,11 +38,17 @@ export async function getServerSideProps(context) {
 
 export default function Index({ data }) {
     const [title, setTitle] = useState('');
+    const [scrollActive, setScrollActive] = useState(false);
     const [locales, setLocales] = useState(data);
     const { locale } = useRouter();
+    let activeSession = 0;
 
     useEffect(() => {
-        const test = (entries, observer) => {
+        window.addEventListener("scroll", () => {
+            setScrollActive(window.scrollY > window.innerHeight / 3);
+        });
+
+        const observerCallback = (entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.remove('animate-fadeout');
@@ -54,15 +60,20 @@ export default function Index({ data }) {
                     entry.target.classList.remove('animate-fadein');
                 }
             });
-        }
+        };
 
-        const sectionObserver = new IntersectionObserver(test, { root: null, threshold: 0.5 });
-        document.querySelectorAll('section')?.forEach(section => sectionObserver.observe(section));
+        const observerOptions = {
+            root: null,
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        document.querySelectorAll('section')?.forEach(section => observer.observe(section));
     }, []);
 
     return (
         <LocalesContext.Provider value={[locales, setLocales]}>
-            <Layout title={title}>
+            <Layout title={title} scrollActive={scrollActive}>
                 <Home />
                 <Portfolio />
                 <About />

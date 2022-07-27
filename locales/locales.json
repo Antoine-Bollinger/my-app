@@ -63,7 +63,7 @@
                 "href": "portfolio"
             },
             {
-                "title": "à propos",
+                "title": "À propos",
                 "href": "about"
             },
             {
@@ -88,7 +88,7 @@
             "resume": "Télécharger mon CV"
         },
         "about": {
-            "title": "à propos de moi"
+            "title": "À propos de moi"
         },
         "portfolio": {
             "title": "Mon portfolio"

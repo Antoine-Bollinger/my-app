@@ -16,10 +16,11 @@ export const Thumb = ({ selected, onClick, imgSrc }) => (
             type="button"
         >
             <Image
+                priority
                 className="embla__slide__thumbnail grayscale"
                 src={imgSrc.src}
-                height={imgSrc.src.heigt}
-                width={imgSrc.src.width}
+                // height={imgSrc.src.heigt}
+                // width={imgSrc.src.width}
                 alt={imgSrc.title}
                 layout="fill"
                 objectFit="cover"
@@ -57,7 +58,7 @@ const EmblaCarousel = ({ slides }) => {
 
     return (
         <>
-            <div className="embla fixed bottom-4pal left-pal lg:left-2pal right-pal lg:right-2pal top-2pal z-[999]">
+            <div className="embla absolute bottom-4pal left-pal lg:left-2pal right-pal lg:right-2pal top-2pal z-[999]">
                 <div className="embla__viewport h-full" ref={mainViewportRef}>
                     <div className="embla__container h-full">
                         {slides.map((img, index) => (
@@ -82,6 +83,7 @@ const EmblaCarousel = ({ slides }) => {
                                         alt={img.title}
                                         layout="fill"
                                         objectFit="contain"
+                                        priority
                                     />
                                 </div>
                             </div>
@@ -89,7 +91,7 @@ const EmblaCarousel = ({ slides }) => {
                     </div>
                 </div>
             </div>
-            <div className="embla embla--thumb fixed bottom-2pal left-pal lg:left-2pal right-pal lg:right-2pal h-2pal z-[999]">
+            <div className="embla embla--thumb absolute bottom-2pal left-pal lg:left-2pal right-pal lg:right-2pal h-2pal z-[999]">
                 <div className="embla__viewport h-full" ref={thumbViewportRef}>
                     <div className="embla__container embla__container--thumb h-full">
                         {slides.map((img, index) => (

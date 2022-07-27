@@ -14,7 +14,7 @@ export const Thumb = ({ selected, onClick, imgSrc }) => (
                 height={imgSrc.src.heigt}
                 width={imgSrc.src.width}
                 alt={imgSrc.title}
-                layout="responsive"
+                layout="fill"
             />
         </button>
     </div>
