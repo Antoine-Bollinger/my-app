@@ -19,8 +19,6 @@ export const Thumb = ({ selected, onClick, imgSrc }) => (
                 priority
                 className="embla__slide__thumbnail grayscale"
                 src={imgSrc.src}
-                // height={imgSrc.src.heigt}
-                // width={imgSrc.src.width}
                 alt={imgSrc.title}
                 layout="fill"
                 objectFit="cover"

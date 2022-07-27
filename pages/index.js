@@ -46,7 +46,7 @@ export default function Index({ data }) {
     useEffect(() => {
         window.addEventListener("scroll", () => {
             setScrollActive(window.scrollY > window.innerHeight / 3);
-        });
+        }, { passive: true });
 
         const observerCallback = (entries, observer) => {
             entries.forEach(entry => {
