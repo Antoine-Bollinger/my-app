@@ -21,11 +21,11 @@ export default function handler(req, res) {
                 subject: `${name} vous a envoyé un email`,
 
             }
-        )
+        );
     } catch (e) {
-        res.status(400).end(JSON.stringify({ message: "Error" }))
+        res.status(400).end(JSON.stringify({ message: "Error" }));
         return;
     }
 
-    res.status(200).end(JSON.stringify(req.body))
+    res.status(200).end(JSON.stringify(req.body));
 }
