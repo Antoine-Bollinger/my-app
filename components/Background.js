@@ -4,28 +4,26 @@ import { useRouter } from "next/router";
 
 import Image from "next/image";
 import bg from "../public/bg_binary.jpg";
-
 import { techs } from "../data/techs";
-import { useCallback, useEffect, useState } from "react";
+
+import { openModal } from "./Modal";
 
 export function TechsBg({ scrollActive }) {
     const [locales] = useContext(LocalesContext);
     const { locale } = useRouter();
-
-    const handleLink = useCallback((url) => {
-        const modal = document.getElementById('modal');
-        modal.querySelector('.modal-title').insertAdjacentHTML('afterbegin', locales[locale].externLink.title);
-        modal.querySelector('.modal-body').insertAdjacentHTML('afterbegin', locales[locale].externLink.message.replace('%s', `<strong>${url}</strong>`));
-        modal.querySelector('.modal-link').dataset.href = url;
-        modal.classList.remove('hidden');
-    })
 
     return (
         <div className={`${scrollActive ? 'animate-fadeout' : 'animate-fadein'} z-40 hover:[animation-play-state:paused]`} id="ribbon">
             {['animate-infiniteXSlide', 'translate-x-full animate-infiniteXSlideDelay'].map((ele, index) => (
                 <div className={`h-2pal fixed w-full bottom-0 flex justify-between items-center flex-row ${ele}`} key={index}>
                     {techs.map((img, index) => (
-                        <div className={`relative h-1/2 w-full px-2`} onClick={() => { handleLink(img.href) }} key={index}>
+                        <div className={`relative h-1/2 w-full px-2`} onClick={() => {
+                            openModal({
+                                body: locales[locale].externLink.message.replace('%s', `<strong>${img.href}</strong>`),
+                                header: locales[locale].externLink.title,
+                                href: img.href
+                            })
+                        }} key={index}>
                             <Image
                                 sizes="10vw"
                                 src={img.src}

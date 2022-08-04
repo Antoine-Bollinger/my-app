@@ -9,6 +9,7 @@ import { getMarkup, getLocales } from "../lib/locales";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { ArrayToObject } from "../lib/helpers";
+// import clientPromise from "../lib/mongodb";
 
 export async function getServerSideProps(context) {
     const locales = await getLocales();
@@ -29,6 +30,17 @@ export async function getServerSideProps(context) {
         }
     }));
     const data = ArrayToObject(all, 'locale');
+
+    // const client = await clientPromise;
+    // const db = client.db("sample_restaurants");
+
+    // const restos = await db
+    //     .collection('restaurants')
+    //     .find({})
+    //     .sort({ metacritic: -1 })
+    //     .limit(20)
+    //     .toArray();
+
     return {
         props: {
             data
