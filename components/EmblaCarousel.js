@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-
 export const Thumb = ({ selected, onClick, imgSrc }) => (
     <div className={`embla__slide embla__slide--thumb  ${selected ? "is-selected" : ""} h-full`}>
         <button
@@ -27,7 +26,7 @@ export const Thumb = ({ selected, onClick, imgSrc }) => (
     </div>
 );
 
-const EmblaCarousel = ({ slides }) => {
+const EmblaCarousel = ({ slides, width }) => {
     const { locale } = useRouter();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [mainViewportRef, embla] = useEmblaCarousel({ skipSnaps: false });
@@ -74,16 +73,33 @@ const EmblaCarousel = ({ slides }) => {
                                         </a>
                                     </div>
                                 </div>
-                                <div className="embla__slide__inner h-full w-full transition relative">
-                                    <Image
-                                        className="embla__slide__img transition"
-                                        src={img.src}
-                                        alt={img.title}
-                                        layout="fill"
-                                        objectFit="contain"
-                                        priority
-                                    />
-                                </div>
+
+                                {width < 768 ? (
+                                    <div className="embla__slide__inner h-full w-full p-4">
+                                        <div className="h-full w-full transition relative">
+                                            <Image
+                                                className="embla__slide__img transition"
+                                                src={img.src_mobile}
+                                                alt={img.title}
+                                                layout="fill"
+                                                objectFit="contain"
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="embla__slide__inner h-full w-full transition relative">
+                                        <Image
+                                            className="embla__slide__img transition"
+                                            src={img.src_laptop}
+                                            alt={img.title}
+                                            layout="fill"
+                                            objectFit="contain"
+                                            priority
+                                        />
+                                    </div>
+                                )}
+
                             </div>
                         ))}
                     </div>
