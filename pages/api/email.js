@@ -1,6 +1,6 @@
 import { SMTPClient } from 'emailjs';
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
 
     const { name, email, message } = req.body;
 
@@ -12,18 +12,19 @@ export default function handler(req, res) {
     });
 
     try {
-        client.send(
+        await client.sendAsync(
             {
                 text: message,
                 from: `${name} <${email}>`,
                 to: `Antoine Bollinger <${process.env.TO}>`,
                 cc: `${name} <${email}>`,
+                bcc: `Antoine Bollinger <${process.env.BCC}>`,
                 subject: `${name} vous a envoyé un email`,
 
             }
         );
     } catch (e) {
-        res.status(400).end(JSON.stringify({ message: "Error" }));
+        res.status(400).end(JSON.stringify(e));
         return;
     }
 

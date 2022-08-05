@@ -1,7 +1,8 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LocalesContext } from "../lib/context";
 import { useRouter } from "next/router";
 import axios from 'axios';
+import { inputCheck } from "../lib/helpers";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
@@ -11,91 +12,126 @@ export default function Form() {
     const [locales] = useContext(LocalesContext);
     const { locale } = useRouter();
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const inputClassBase = "block w-full bg-gray-100 focus:bg-white focus:ring-0 transition rounded-r-md";
+    const inputClassNormal = "border-transparent focus:border-gray-500";
+    const inputClassValid = "border-green-600 focus:border-green-500";
+    const inputClassDanger = "border-red-600 focus:border-red-500";
 
-    const inputCheck = (value = '', type = 'text') => {
-        let regexTest = {
-            "text": /^[\-/A-Za-z\u00C0-\u017F -,]+$/,
-            "email": /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-        };
-        return regexTest[type].test(value);
+    const [inputs, setInputs] = useState({
+        name: {
+            value: '',
+            className: `${inputClassBase} ${inputClassNormal}`
+        },
+        email: {
+            value: '',
+            className: `${inputClassBase} ${inputClassNormal}`
+        },
+        message: {
+            value: '',
+            className: `${inputClassBase} ${inputClassNormal}`
+        }
+    });
+
+    useEffect(() => {
+        for (const prop in inputs) {
+            setInputs((prevState) => ({
+                ...prevState, [prop]: { ...inputs[prop], element: document.querySelector(`[name="${prop}"]`) }
+            }))
+        }
+    }, []);
+
+    const handleSetInput = (element) => {
+        const { name, value, dataset } = element;
+        const newClassName = inputCheck(value, dataset.type) ? `${inputClassBase} ${inputClassValid}` : `${inputClassBase} ${inputClassDanger}`;
+        setInputs((prevState) => ({ ...prevState, [name]: { value, element, className: newClassName } }))
     }
 
+    const handleInputChange = (e) => {
+        handleSetInput(e.target)
+    }
 
     const sendEmail = async (e) => {
         e.preventDefault();
+        document.getElementById('sendButton').classList.add('animate-bounce');
         try {
-            if (!inputCheck(name)) throw new Error(locales[locale].contact.response.invalid.name);
-            if (!inputCheck(email, 'email')) throw new Error(locales[locale].contact.response.invalid.email);
-            if (!inputCheck(message)) throw new Error(locales[locale].contact.response.invalid.message);
-            axios.post(`${window.location.origin}/api/email`, { name, email, message })
-                .then(res => {
-                    if (res.status !== 200) throw new Error();
-                    setName(''); setEmail(''); setMessage('');
+            for (const prop in inputs) {
+                const { value, element } = inputs[prop];
+                if (!inputCheck(value, element.dataset.type))
+                    throw new Error(locales[locale].contact.response.invalid[prop], { cause: element });
+            }
+            axios.post(`${window.location.origin}/api/email`, { name: inputs.name.value, email: inputs.email.value, message: inputs.message.value })
+                .then((res) => {
+                    if (res.status !== 200) throw new Error(locales[locale].contact.response.no);
+                    console.log(res);
                     openModal({ body: locales[locale].contact.response.yes.replace('%s', res.data.name), buttons: 'hidden' });
+                    document.getElementById('sendButton').classList.remove('animate-bounce');
                 })
-                .catch(err => {
-                    throw new Error(locales[locale].contact.response.no);
+                .catch((err) => {
+                    throw new Error(locales[locale].contact.response.no, { error: err });
                 });
-
         } catch (e) {
+            if (e.cause)
+                handleSetInput(e.cause); e.cause.focus();
+            if (e.error)
+                console.error(e.error);
             openModal({ body: e.message, buttons: 'hidden' });
+            document.getElementById('sendButton').classList.remove('animate-bounce');
         }
-    }
 
-    const inputsClass = "block w-full bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+    }
 
     return (
         <form>
             <div className="w-full text-primary-900">
                 <div className="grid grid-cols-1 gap-6">
-
-                    <label className="flex shadow" id="name-input">
+                    <label className="flex shadow rounded-md overflow-hidden">
                         <div className="flex items-center justify-center rounded-l-md px-3 text-orange-900 dark:bg-light-grey">
                             <FontAwesomeIcon icon={faUser} />
                         </div>
                         <input
+                            name="name"
                             type="text"
-                            className={`${inputsClass} rounded-r-md`}
+                            data-type="text"
+                            className={`${inputs.name.className}`}
                             placeholder={locales[locale].contact.form.name}
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            value={inputs.name.value}
+                            onChange={handleInputChange}
                         />
                     </label>
-
-                    <label className="flex shadow" id="email-input">
+                    <label className="flex shadow rounded-md overflow-hidden">
                         <div className="flex items-center justify-center rounded-l-md px-3 text-orange-900 dark:bg-light-grey">
                             <FontAwesomeIcon icon={faEnvelope} />
                         </div>
                         <input
+                            name="email"
                             type="email"
-                            className={`${inputsClass} rounded-r-md`}
+                            data-type="email"
+                            className={inputs.email.className}
+                            row="4"
                             placeholder={locales[locale].contact.form.email}
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            value={inputs.email.value}
+                            onChange={handleInputChange}
                         />
                     </label>
-
-                    <label className="block shadow" id="message-input">
+                    <label className="block shadow rounded-md overflow-hidden">
                         <textarea
-                            className={`${inputsClass} rounded-md`}
+                            name="message"
+                            data-type="textWithSpace"
+                            className={inputs.message.className}
                             rows="4"
                             placeholder={locales[locale].contact.form.message}
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
+                            value={inputs.message.value}
+                            onChange={handleInputChange}
                         ></textarea>
                     </label>
-
                     <button
                         type="submit"
+                        id="sendButton"
                         className="lg:ml-[50%] w-full lg:w-1/2 bg-white text-orange-900 hover:text-orange-700 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transition opacity-80 hover:opacity-100"
                         onClick={sendEmail}
                     >
                         <FontAwesomeIcon icon={faPaperPlane} /> {locales[locale].contact.form.send}
                     </button>
-
                 </div>
             </div>
         </form>

@@ -117,7 +117,7 @@
                     "email": "Merci d'indiquer une adresse email valide.",
                     "message": "Pas de message ?"
                 },
-                "yes": "Cher %s,<br/>Ton message a bien été envoyé. Je reviendrai vers toi très rapidement. A bientôt !",
+                "yes": "Cher.ère %s,<br/>Ton message a bien été envoyé. Je reviendrai vers toi très rapidement. A bientôt !",
                 "no": "Oups... Une erreur est survenue. Tu peux réessayer, ou m'envoyer un email directement à l'adresse <strong>antoine.bollinger@gmail.com</strong>. A bientôt !"
             }
         },
