@@ -24,7 +24,7 @@ export default function FourOhFour({ data }) {
     return (
         <>
             <MainHead title={locales.title} />
-            <main className="w-full h-full p-3pal">
+            <main className="w-full h-full p-3pal overflow-y-auto">
                 <a href={siteUrl} className="text-orange-900 hover:text-orange-700 transition">
                     <h1 className="fixed text-center lg:text-left top-0 left-0 right-0 lg:top-pal w-full lg:left-2pal text-3xl uppercase font-bold h-2pal lg:h-auto z-40">Antoine Bollinger</h1>
                 </a>
