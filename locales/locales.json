@@ -16,6 +16,9 @@
                 "href": "contact"
             }
         ],
+        "legal": {
+            "title": "Legal notice"
+        },
         "externLink": {
             "title": "Wait!",
             "message": "This link will take you to %s.<br/>Are you sure that's what you want?"
@@ -80,6 +83,9 @@
                 "href": "contact"
             }
         ],
+        "legal": {
+            "title": "Mentions légales"
+        },
         "externLink": {
             "title": "Attends !",
             "message": "Ce lien t'emmène vers %s.<br/>Es-tu sûr(e) de vouloir t'y rendre ?"
@@ -144,6 +150,9 @@
                 "href": "contact"
             }
         ],
+        "legal": {
+            "title": "Legal notice"
+        },
         "externLink": {
             "title": "Espera !",
             "message": "Este link vai te levar para %s.<br/>Tem certeza de que é o que você quer?"
