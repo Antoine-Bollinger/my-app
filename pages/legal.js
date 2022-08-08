@@ -32,7 +32,7 @@ export default function FourOhFour({ data }) {
                 <h1 className="text-3xl mb-8">{locales.title}</h1>
                 <p>&nbsp;</p>
                 <p>
-                    Les créations réalisées par la société <a href="/"><b>Antoine Pierre Bollinger</b></a> sont protégées au titre du droit d’auteur conformément aux dispositions des livres I à III du Code de la Propriété Intellectuelle. A ce titre, toute reproduction, représentation, utilisation, adaptation, modification, incorporation, traduction, commercialisation, partielles ou intégrales des éléments contenus dans ce site, sans l’autorisation écrite préalable de <a href="/"><b>Antoine Pierre Bollinger</b></a> est interdite, sous peine de constituer un délit de contrefaçon de droit d’auteur.
+                    Les créations réalisées par la société <a href={siteUrl}><b>Antoine Pierre Bollinger</b></a> sont protégées au titre du droit d’auteur conformément aux dispositions des livres I à III du Code de la Propriété Intellectuelle. A ce titre, toute reproduction, représentation, utilisation, adaptation, modification, incorporation, traduction, commercialisation, partielles ou intégrales des éléments contenus dans ce site, sans l’autorisation écrite préalable de <a href={siteUrl}><b>Antoine Pierre Bollinger</b></a> est interdite, sous peine de constituer un délit de contrefaçon de droit d’auteur.
                 </p>
                 <p>&nbsp;</p>
                 <h2>Données personnelles</h2>
@@ -45,7 +45,7 @@ export default function FourOhFour({ data }) {
                 <h2>Entreprise</h2>
                 <p>&nbsp;</p>
                 <p>
-                    <a href="/"><b>Antoine Pierre Bollinger</b></a>
+                    <a href={siteUrl}><b>Antoine Pierre Bollinger</b></a>
                 </p>
                 <p>
                     14 Rue de Bergkamen<br />
