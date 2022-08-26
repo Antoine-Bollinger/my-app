@@ -47,27 +47,27 @@ export default function Index({ data }) {
             setScrollActive(window.scrollY > window.innerHeight / 3);
         }, { passive: true });
 
-        // const observerCallback = (entries, observer) => {
-        //     entries.forEach(entry => {
-        //         if (entry.isIntersecting) {
-        //             entry.target.classList.remove('animate-fadeout');
-        //             entry.target.classList.add('animate-fadein');
-        //             if (!entry) return;
-        //             setTitle(locales[locale][entry.target.id].title);
-        //         } else {
-        //             entry.target.classList.add('animate-fadeout');
-        //             entry.target.classList.remove('animate-fadein');
-        //         }
-        //     });
-        // };
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('animate-fadeout');
+                    entry.target.classList.add('animate-fadein');
+                    if (!entry) return;
+                    setTitle(locales[locale][entry.target.id].title);
+                } else {
+                    entry.target.classList.add('animate-fadeout');
+                    entry.target.classList.remove('animate-fadein');
+                }
+            });
+        };
 
-        // const observerOptions = {
-        //     root: null,
-        //     threshold: 0.5
-        // };
+        const observerOptions = {
+            root: null,
+            threshold: 0.5
+        };
 
-        // const observer = new IntersectionObserver(observerCallback, observerOptions);
-        // document.querySelectorAll('section')?.forEach(section => observer.observe(section));
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        document.querySelectorAll('section')?.forEach(section => observer.observe(section));
     }, []);
 
     return (
