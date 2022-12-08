@@ -1,10 +1,8 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { LocalesContext } from "../lib/context";
 import { useRouter } from "next/router";
 
 import Section from '../components/Section';
-import Image from "next/image";
-import CustomImage from "../components/CustomImage";
 
 import { AddClassesToHTMLString } from "../lib/helpers";
 
