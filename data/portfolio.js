@@ -43,7 +43,7 @@ export const portfolio = [
             fr: "Mon site en tant que traducteur. Mes premiers pas dans le web. D'abord écrit en simple Html & Css, j'ai ensuite refondu le site en Php.",
             pt: "Meu site apresentando o meu trabalho de tradutor. Meus primeiros passos no Web... primeiro escrito em simples Html & CSS, passei agora para o Php."
         },
-        url: "https://antoine-traductions.site/",
+        url: "https://abollinger.fr/antoine-traductions/",
         git: "https://github.com/antoinebollinger/antoine-traductions",
     },
     {
