@@ -69,6 +69,7 @@ export default function Form() {
                 body: data
             });
             const response = await sendEmail.json();
+            console.log();
             if (response.sent) {
                 openModal({ body: locales[locale].contact.response.yes.replace('%s', inputs.name.value), buttons: 'hidden' });
                 document.getElementById('sendButton').classList.remove('animate-bounce');
@@ -76,10 +77,13 @@ export default function Form() {
                 throw new Error(locales[locale].contact.response.no);
             }
         } catch (e) {
-            if (e.cause)
-                handleSetInput(e.cause); e.cause.focus();
-            if (e.error)
+            if (e.cause) {
+                handleSetInput(e.cause);
+                e.cause.focus();
+            }
+            if (e.error) {
                 console.error(e.error);
+            }
             openModal({ body: e.message, buttons: 'hidden' });
             document.getElementById('sendButton').classList.remove('animate-bounce');
         }
