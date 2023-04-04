@@ -69,7 +69,6 @@ export default function Form() {
                 body: data
             });
             const response = await sendEmail.json();
-            console.log(response.sent);
             if (response.sent) {
                 openModal({ body: locales[locale].contact.response.yes.replace('%s', inputs.name.value), buttons: 'hidden' });
                 document.getElementById('sendButton').classList.remove('animate-bounce');
