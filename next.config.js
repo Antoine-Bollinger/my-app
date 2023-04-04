@@ -6,6 +6,10 @@ const nextConfig = {
     defaultLocale: 'default',
     localeDetection: true
   },
+  env: {
+    email_api: "https://abollinger-mailer.vercel.app/api/mailer/email",
+    email_to: "antoine.bollinger@hotmail.fr"
+  }
 }
 
 module.exports = nextConfig

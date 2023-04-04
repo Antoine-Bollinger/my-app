@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { LocalesContext } from "../lib/context";
 import { useRouter } from "next/router";
-import axios from 'axios';
 import { inputCheck } from "../lib/helpers";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -59,16 +58,24 @@ export default function Form() {
                 if (!inputCheck(value, element.dataset.type))
                     throw new Error(locales[locale].contact.response.invalid[prop], { cause: element });
             }
-            axios.post(`${window.location.origin}/api/email`, { name: inputs.name.value, email: inputs.email.value, message: inputs.message.value })
-                .then((res) => {
-                    if (res.status !== 200) throw new Error(locales[locale].contact.response.no);
-                    console.log(res);
-                    openModal({ body: locales[locale].contact.response.yes.replace('%s', res.data.name), buttons: 'hidden' });
-                    document.getElementById('sendButton').classList.remove('animate-bounce');
-                })
-                .catch((err) => {
-                    throw new Error(locales[locale].contact.response.no, { error: err });
-                });
+            const data = new FormData();
+            data.append("name", inputs.name.value);
+            data.append("email_from", inputs.email.value);
+            data.append("email_to", process.env.email_to);
+            data.append("phone", "");
+            data.append("message", inputs.message.value);
+            const sendEmail = await fetch(process.env.email_api, {
+                method: "POST",
+                body: data
+            });
+            const response = await sendEmail.json();
+            console.log(response.sent);
+            if (response.sent) {
+                openModal({ body: locales[locale].contact.response.yes.replace('%s', inputs.name.value), buttons: 'hidden' });
+                document.getElementById('sendButton').classList.remove('animate-bounce');
+            } else {
+                throw new Error(locales[locale].contact.response.no);
+            }
         } catch (e) {
             if (e.cause)
                 handleSetInput(e.cause); e.cause.focus();
