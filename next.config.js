@@ -8,7 +8,7 @@ const nextConfig = {
   },
   env: {
     email_api: "https://abollinger-mailer.vercel.app/api/mailer/email",
-    email_to: "antoine.bollinger@hotmail.fr"
+    email_to: "contact@antoinebollinger.fr"
   }
 }
 
