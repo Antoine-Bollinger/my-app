@@ -62,7 +62,7 @@ export default function Form() {
             data.append("name", inputs.name.value);
             data.append("email_from", inputs.email.value);
             data.append("email_to", process.env.email_to);
-            data.append("phone", "");
+            data.append("name_to", process.env.name_to);
             data.append("message", inputs.message.value);
             const sendEmail = await fetch(process.env.email_api, {
                 method: "POST",
