@@ -25,14 +25,14 @@ module.exports = {
                     'to': { transform: 'perspective(200rem) rotateY(360deg)' },
                 },
                 fadein: {
-                    '0%': { opacity: '0', display: 'none' },
-                    '1%': { opacity: '0', display: 'block' },
-                    '100%': { opacity: '1', display: 'block' }
+                    '0%': { opacity: '0' },
+                    '1%': { opacity: '0' },
+                    '100%': { opacity: '1' }
                 },
                 fadeout: {
-                    '0%': { opacity: '1', display: 'block' },
-                    '99%': { opacity: '0', display: 'block' },
-                    '100%': { opacity: '0', display: 'none' }
+                    '0%': { opacity: '1' },
+                    '99%': { opacity: '0' },
+                    '100%': { opacity: '0' }
                 },
                 infiniteXSlide: {
                     'from': { transform: 'translateX(100%)' },
