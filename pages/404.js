@@ -32,13 +32,6 @@ export default function FourOhFour({ data }) {
                 </a>
                 <section className="w-full lg:w-1/3 h-1/3 lg:h-full flex items-center justify-center">
                     <Identity className="w-full relative" text1="Copyright © 2022" text2="antoinebollinger.fr" />
-
-                    {/* <Image
-                        src={me}
-                        layout="fill"
-                        objectFit="contain"
-                        alt="Me"
-                    /> */}
                 </section>
                 <section>
                     <h1 className="text-3xl mb-8">404 | {locales.error}</h1>
