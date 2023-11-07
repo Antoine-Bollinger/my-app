@@ -61,10 +61,14 @@ export default function Form() {
             const data = new FormData();
             data.append("name", inputs.name.value);
             data.append("email_from", inputs.email.value);
-            data.append("email_to", process.env.email_to);
-            data.append("name_to", process.env.name_to);
+            data.append("email_to", process.env.NEXT_PUBLIC_EMAIL_TO);
+            data.append("name_to", process.env.NEXT_PUBLIC_NAME_TO);
             data.append("message", inputs.message.value);
-            const sendEmail = await fetch(process.env.email_api, {
+            data.append('transporter', 'gmail');
+
+            console.log(inputs);
+
+            const sendEmail = await fetch(`${process.env.NEXT_PUBLIC_EMAIL_API}/contact`, {
                 method: "POST",
                 body: data
             });
