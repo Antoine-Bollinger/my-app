@@ -26,12 +26,12 @@ export const portfolio = [
         src_laptop: media1_laptop,
         src_mobile: media1_mobile,
         description: {
-            en: "A website that presents the activity of Sabrina Appriou, personal development coach, founder of LaMeilleureVersionDeMoi.",
-            fr: "Sabrina, coach en développement personnel et fondatrice de LaMeilleureVersionDeMoi, souhaite développer sa visibilité sur le net et m'a confié la création de son site.",
-            pt: "Sabrina, coach de desenvolvimento pessoal e fundadora do LaMeilleureVersionDeMoi, quer desenvolver sua visibilidade na Internet e me confiou a criação de seu site."
+            en: "A website that presents the activity of Sabrina Appriou, personal development coach, founder of Un pas de plus Coaching.",
+            fr: "Sabrina, coach en développement personnel et fondatrice de Un pas de plus Coaching, souhaite développer sa visibilité sur le net et m'a confié la création de son site.",
+            pt: "Sabrina, coach de desenvolvimento pessoal e fundadora do Un pas de plus Coaching, quer desenvolver sua visibilidade na Internet e me confiou a criação de seu site."
         },
-        url: "https://lameilleureversiondemoi.netlify.app/",
-        git: "https://github.com/antoinebollinger/lameilleureversiondemoi",
+        url: "https://unpasdeplus-coaching.fr/",
+        git: "https://github.com/antoinebollinger/unpasdeplus-coaching",
     },
     {
         title: 'Antoine Traductions',
